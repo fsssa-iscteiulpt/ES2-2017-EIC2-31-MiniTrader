@@ -10,7 +10,7 @@ import mt.comm.ClientComm;
 import mt.comm.impl.ClientCommImpl;
 
 public class MicroTraderClientImpl implements MicroTraderClient {
-	//test
+	//test 2
 	public static void main(String args[]) {
 		ClientComm clientComm = new ClientCommImpl();
 		MicroTraderClient client = new MicroTraderClientImpl();
