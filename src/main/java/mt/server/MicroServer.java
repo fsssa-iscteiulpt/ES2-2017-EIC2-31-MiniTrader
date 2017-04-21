@@ -13,6 +13,9 @@ import java.util.Set;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
 import mt.Order;
 import mt.comm.ServerComm;
 import mt.comm.ServerSideMessage;
@@ -103,8 +106,16 @@ public class MicroServer implements MicroTraderServer {
 						if(msg.getOrder().getServerOrderID() == EMPTY){
 							msg.getOrder().setServerOrderID(id++);
 						}
-						notifyAllClients(msg.getOrder());
-						processNewOrder(msg);
+						if(msg.getOrder().getNumberOfUnits() >= 10){
+							notifyAllClients(msg.getOrder());
+							processNewOrder(msg);
+						}
+						else{
+							System.out.println("Order number of units is less than 10");
+							JFrame frame=new JFrame("Orders");
+							JOptionPane.showMessageDialog(frame, "Number of units must be less than 10", "Warning",
+				                    JOptionPane.WARNING_MESSAGE);
+						}
 					} catch (ServerException e) {
 						serverComm.sendError(msg.getSenderNickname(), e.getMessage());
 					}
@@ -240,8 +251,8 @@ public class MicroServer implements MicroTraderServer {
 
 		// reset the set of changed orders
 		updatedOrders = new HashSet<>();
-
-	}
+		}
+		
 	
 	/**
 	 * Store the order on map
