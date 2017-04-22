@@ -111,10 +111,7 @@ public class MicroServer implements MicroTraderServer {
 							processNewOrder(msg);
 						}
 						else{
-							System.out.println("Order number of units is less than 10");
-							JFrame frame=new JFrame("Orders");
-							JOptionPane.showMessageDialog(frame, "Number of units must be less than 10", "Warning",
-				                    JOptionPane.WARNING_MESSAGE);
+							displayWarning("Number of units must be less than 10");
 						}
 					} catch (ServerException e) {
 						serverComm.sendError(msg.getSenderNickname(), e.getMessage());
@@ -377,4 +374,15 @@ public class MicroServer implements MicroTraderServer {
 		}
 	}
 
+	/**
+	 * Displays a warning in the console and on a frame with the given String
+	 * 
+	 * @param warning String containing the warning to be displayed
+	 */
+	private void displayWarning(String warning){
+		System.out.println(warning);
+		JFrame frame=new JFrame("Orders");
+		JOptionPane.showMessageDialog(frame, warning, "Warning",
+                JOptionPane.WARNING_MESSAGE);
+	}
 }
