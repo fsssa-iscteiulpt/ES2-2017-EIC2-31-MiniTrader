@@ -103,10 +103,10 @@ public class MicroServer implements MicroTraderServer {
 				case NEW_ORDER:
 					try {
 						verifyUserConnected(msg);
-						if(msg.getOrder().getServerOrderID() == EMPTY){
-							msg.getOrder().setServerOrderID(id++);
-						}
 						if(msg.getOrder().getNumberOfUnits() >= 10){
+							if(msg.getOrder().getServerOrderID() == EMPTY){
+								msg.getOrder().setServerOrderID(id++);
+							}
 							notifyAllClients(msg.getOrder());
 							processNewOrder(msg);
 						}
