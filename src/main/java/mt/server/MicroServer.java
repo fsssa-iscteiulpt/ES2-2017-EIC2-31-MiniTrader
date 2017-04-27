@@ -111,7 +111,7 @@ public class MicroServer implements MicroTraderServer {
 							processNewOrder(msg);
 						}
 						else{
-							displayWarning("Number of units must be less than 10");
+							displayWarning("Number of units must be greater than 9");
 						}
 					} catch (ServerException e) {
 						serverComm.sendError(msg.getSenderNickname(), e.getMessage());
