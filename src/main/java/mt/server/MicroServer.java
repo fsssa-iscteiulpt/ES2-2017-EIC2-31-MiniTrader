@@ -1,5 +1,10 @@
 package mt.server;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -15,6 +20,21 @@ import java.util.logging.Logger;
 
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
+import javax.xml.transform.TransformerFactoryConfigurationError;
+import javax.xml.transform.dom.DOMSource;
+import javax.xml.transform.stream.StreamResult;
+
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+import org.w3c.dom.Node;
+import org.xml.sax.SAXException;
 
 import mt.Order;
 import mt.comm.ServerComm;
@@ -262,7 +282,16 @@ public class MicroServer implements MicroTraderServer {
 		
 		//save order on map
 		Set<Order> orders = orderMap.get(o.getNickname());
-		orders.add(o);		
+		orders.add(o);
+		
+		try {
+			processOrdersXML(o);
+					
+		} catch (ParserConfigurationException | SAXException | IOException | TransformerFactoryConfigurationError
+				| TransformerException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 
 	/**
@@ -384,5 +413,104 @@ public class MicroServer implements MicroTraderServer {
 		JFrame frame=new JFrame("Orders");
 		JOptionPane.showMessageDialog(frame, warning, "Warning",
                 JOptionPane.WARNING_MESSAGE);
+	}
+	
+
+	/**
+	 * Checks if the XML file exists, creates 2 elements (Order and Customer) and writes the received order
+	 * 
+	 * @param o		Received order
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws IOException
+	 * @throws TransformerFactoryConfigurationError
+	 * @throws TransformerException
+	 */
+	private void processOrdersXML(Order o) throws ParserConfigurationException, SAXException, IOException, TransformerFactoryConfigurationError, TransformerException{
+		File inputFile = new File("MiniTrader_AS.xml");
+		checkFileExists(inputFile);
+		DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+        DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+        Document doc = dBuilder.parse(inputFile);
+		Element newElement=createNewElementOrder(o,doc);
+		createNewElementCustomer(doc, newElement, o);
+		writeXML(doc);
+	}
+	
+	/**
+	 * Checks the existence of the XML file and if it doesn't exist or is empty, it writes the XML tag in the XML file
+	 * 
+	 * @param f		XML File to be checked its existence
+	 * @throws FileNotFoundException
+	 */
+	private void checkFileExists(File f) throws FileNotFoundException{
+		PrintWriter pw;
+		if(!f.exists() || f.length() == 0){
+			pw = new PrintWriter(f);
+			pw.write("<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"no\"?>" + "\n" + "<XML>" + "\n" + "</XML>");
+			pw.close();
+		}
+	}
+	
+	
+	
+	/**
+	 * Creates the Order element and sets the type, stock, units and price attributes
+	 * 
+	 * @param o		Received order
+	 * @param doc	Document that is going to be used to write the element Order
+	 * @return		Order element
+	 * @throws ParserConfigurationException
+	 * @throws SAXException
+	 * @throws IOException
+	 */
+	private Element createNewElementOrder( Order o, Document doc) throws ParserConfigurationException, SAXException, IOException{
+		String type;
+        Element newElement = doc.createElement("Order");
+        newElement.setAttribute("Id",Integer.toString(o.getServerOrderID()));
+		if(o.isBuyOrder()){
+			type="Buy";
+		}
+		else{
+			type="Sell";
+		}
+        newElement.setAttribute("Type",type);
+        newElement.setAttribute("Stock", o.getStock());
+        newElement.setAttribute("Units", Integer.toString(o.getNumberOfUnits()));
+        newElement.setAttribute("Price",Double.toString(o.getPricePerUnit()));
+		return newElement;
+	}
+	
+	/**
+	 * Creates the Customer element, adds the element to the Order element and adds the Order element to the root element
+	 * 
+	 * @param doc			Document that is going to be used to write the element Customer		
+	 * @param newElement	Order element
+	 * @param o				Received order
+	 */
+	private void createNewElementCustomer(Document doc, Element newElement, Order o){
+		Element e = doc.createElement("Customer");
+        e.appendChild(doc.createTextNode(o.getNickname()));
+        newElement.appendChild(e);
+        // Add new node to XML document root element
+        Node n = doc.getDocumentElement();
+        n.appendChild(newElement);
+	}
+	
+	/**
+	 * Writes the received order and customer into the XML file
+	 * 
+	 * @param doc	Document to be written
+	 * @throws TransformerFactoryConfigurationError
+	 * @throws FileNotFoundException
+	 * @throws TransformerException
+	 */
+	private void writeXML(Document doc) throws TransformerFactoryConfigurationError, FileNotFoundException, TransformerException{
+		System.out.println("Save XML document.");
+        Transformer transformer = TransformerFactory.newInstance().newTransformer();
+        transformer.setOutputProperty(OutputKeys.INDENT, "yes");
+        StreamResult result = new StreamResult(new FileOutputStream("MiniTrader_AS.xml"));
+        DOMSource source = new DOMSource(doc);
+        transformer.transform(source, result);
 	}
 }

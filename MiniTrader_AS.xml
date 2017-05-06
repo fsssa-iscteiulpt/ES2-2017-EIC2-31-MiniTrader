@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<XML>
+<Order Id="1" Price="1.0" Stock="EDP" Type="Sell" Units="15">
+<Customer>Maria</Customer>
+</Order>
+<Order Id="2" Price="1.0" Stock="PT" Type="Sell" Units="25">
+<Customer>Maria</Customer>
+</Order>
+<Order Id="3" Price="1.0" Stock="ABB" Type="Sell" Units="35">
+<Customer>Maria</Customer>
+</Order>
+<Order Id="4" Price="1.0" Stock="CP" Type="Sell" Units="45">
+<Customer>Maria</Customer>
+</Order>
+<Order Id="5" Price="1.0" Stock="REN" Type="Sell" Units="55">
+<Customer>Maria</Customer>
+</Order>
+<Order Id="6" Price="1.0" Stock="ATT" Type="Sell" Units="65">
+<Customer>Maria</Customer>
+</Order>
+<Order Id="7" Price="1.0" Stock="EDP" Type="Buy" Units="15">
+<Customer>Maria</Customer>
+</Order>
+<Order Id="8" Price="1.0" Stock="EDP" Type="Buy" Units="15">
+<Customer>Manuel</Customer>
+</Order>
+</XML>
