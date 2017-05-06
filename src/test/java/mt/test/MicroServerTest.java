@@ -61,6 +61,18 @@ public class MicroServerTest {
 	@Mock
 	private ServerSideMessage msg11;
 	
+	@Mock
+	private ServerSideMessage msg12;
+	
+	@Mock
+	private ServerSideMessage msg13;
+	@Mock
+	private ServerSideMessage msg14;
+	@Mock
+	private ServerSideMessage msg15;
+	@Mock
+	private ServerSideMessage msg16;
+	
 	@Before
 	public void setup(){
 		ms = new MicroServer();
@@ -70,7 +82,7 @@ public class MicroServerTest {
 		when(msg1.getSenderNickname()).thenReturn("userA");
 		
 		when(msg2.getType()).thenReturn(Type.NEW_ORDER);
-		when(msg2.getOrder()).thenReturn(Order.createSellOrder("userA", "MSFT", 10, 20.0));
+		when(msg2.getOrder()).thenReturn(Order.createSellOrder("userA", "MSFT", 13, 20.0));
 		when(msg2.getSenderNickname()).thenReturn("userA");
 		
 		when(msg3.getType()).thenReturn(Type.CONNECTED);
@@ -104,8 +116,7 @@ public class MicroServerTest {
 		when(msg10.getType()).thenReturn(Type.NEW_ORDER);
 		when(msg10.getOrder()).thenReturn(null);
 		when(msg10.getSenderNickname()).thenReturn("userA");	
-		
-		
+				
 	}
 	
 	@After
@@ -120,15 +131,22 @@ public class MicroServerTest {
 		ms = new MicroServer();
 		Assert.assertNotNull(ms);
 	}
-
+	
 	@Test
 	public void testStart() throws Exception {
+
 		when(serverComm.getNextMessage()).thenReturn(msg1).thenReturn(msg2).thenReturn(msg3).thenReturn(msg4).thenReturn(msg5).thenReturn(msg6).thenReturn(null);
 		
 		ms.start(serverComm);
-		
 		verify(serverComm, atLeastOnce()).sendOrder("userB", Order.createSellOrder("userA", "MSFT", 5, 20.0) );
 		verify(serverComm, atLeastOnce()).sendOrder("userB", Order.createBuyOrder("userB", "MSFT", 0, 21.0) );
+	}
+	
+	@Test
+	public void testextra() throws Exception {			
+		ms.start(serverComm);
+		verify(serverComm, atLeastOnce()).sendOrder("userB", Order.createSellOrder("userA", "MSFT", 12, 21.0) );
+		verify(serverComm, atLeastOnce()).sendOrder("userB", Order.createBuyOrder("userB", "MSFT", 11, 21.0) );
 	}
 	
 	@Test
@@ -156,7 +174,7 @@ public class MicroServerTest {
 //		ms.start(serverComm);
 //		
 //		verify(serverComm, atLeastOnce()).sendError(msg10.getSenderNickname(), "There was no order in the message");
-//	}
+//  }
 	
 	@Test
 	public void testStartProcessSellOrder() throws Exception {
@@ -183,11 +201,11 @@ public class MicroServerTest {
 		verify(serverComm, atLeastOnce()).sendError(msg1.getSenderNickname(), "The user " + msg1.getSenderNickname() + " is already connected.");
 	}
 	
-//	@Test
-//	public void testProcessUserDisconnected() throws Exception {		
-//		when(serverComm.getNextMessage()).thenReturn(msg1).thenReturn(msg2).thenReturn(msg3).thenReturn(msg4).thenReturn(msg8).thenReturn(msg9).thenReturn(msg10).thenReturn(msg5).thenReturn(msg6).thenReturn(null);
-//		ms.start(serverComm);
-//		
-//		verify(serverComm, atLeastOnce()).sendOrder("userA", Order.createBuyOrder("userB", "ISCTE", 5, 21.0));
-//	}
+	@Test
+	public void testProcessUserDisconnected() throws Exception {		
+		when(serverComm.getNextMessage()).thenReturn(msg1).thenReturn(msg2).thenReturn(msg3).thenReturn(msg4).thenReturn(msg8).thenReturn(msg9).thenReturn(msg10).thenReturn(msg5).thenReturn(msg6).thenReturn(null);
+		ms.start(serverComm);
+		
+		verify(serverComm, atLeastOnce()).sendOrder("userA", Order.createBuyOrder("userB", "ISCTE", 5, 21.0));
+	}
 }
