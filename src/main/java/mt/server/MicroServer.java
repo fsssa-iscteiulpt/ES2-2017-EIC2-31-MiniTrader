@@ -103,27 +103,39 @@ public class MicroServer implements MicroTraderServer {
 				case NEW_ORDER:
 					try {
 						verifyUserConnected(msg);
-						if(msg.getOrder().getNumberOfUnits() >= 10){
-							if(msg.getOrder().getServerOrderID() == EMPTY){
-								msg.getOrder().setServerOrderID(id++);
+						//EU requirements
+						if(!getBuySellSameClient(msg)){
+							if(msg.getOrder().getNumberOfUnits() >= 10){
+								if(getNumberOfSellOrders(msg) < 5 || msg.getOrder().isBuyOrder()){
+									if(msg.getOrder().getServerOrderID() == EMPTY){
+										msg.getOrder().setServerOrderID(id++);
+									}
+									notifyAllClients(msg.getOrder());
+									processNewOrder(msg);
+								}
+								else{
+									displayWarning("Already have 5 or more sell orders");
+								}
+							} 
+							else{
+								displayWarning("Number of units must be greater than 9");
 							}
-							notifyAllClients(msg.getOrder());
-							processNewOrder(msg);
 						}
 						else{
-							displayWarning("Number of units must be greater than 9");
+							displayWarning("Clients are not allowerd to issue sell orders for their own buy orders and vice versa");
 						}
 					} catch (ServerException e) {
 						serverComm.sendError(msg.getSenderNickname(), e.getMessage());
 					}
 					break;
+					//
 				default:
 					break;
 				}
 		}
 		LOGGER.log(Level.INFO, "Shutting Down Server...");
 	}
-
+	
 
 	/**
 	 * Verify if user is already connected
@@ -384,5 +396,37 @@ public class MicroServer implements MicroTraderServer {
 		JFrame frame=new JFrame("Orders");
 		JOptionPane.showMessageDialog(frame, warning, "Warning",
                 JOptionPane.WARNING_MESSAGE);
+	}
+	
+	/**
+	 * Given a ServerSideMessage, iterates the message sender's Set, and counts how many sell orders he/she have
+	 * @param msg Received ServerSideMessage
+	 * @return Number of SellOrders associated with the user of the received message
+	 */
+	private int getNumberOfSellOrders(ServerSideMessage msg){
+		int count = 0;
+		Set<Order> orders = orderMap.get(msg.getSenderNickname());
+		for(Order order : orders){
+			if(order.isSellOrder()){
+				count++;
+				if(count > 4) //No need to know if there's more than 5
+					return count;
+			}
+		}
+		return count;
+	}
+	
+	/**
+	 * Given a ServerSideMessage, iterates the message sender's orders and checks if the received order matches an opposite order from this same client
+	 * @param msg Received ServerSideMessage
+	 * @return Boolean - found opposite order from same client or not
+	 */
+	private boolean getBuySellSameClient(ServerSideMessage msg){
+		for (Order o : orderMap.get(msg.getSenderNickname())){
+			if (o.getStock().equals(msg.getOrder().getStock()) && ((o.isBuyOrder() && msg.getOrder().isSellOrder()) || (o.isSellOrder() && msg.getOrder().isBuyOrder()))){
+				return true;
+			}
+		}
+		return false;
 	}
 }

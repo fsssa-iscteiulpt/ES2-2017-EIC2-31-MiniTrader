@@ -105,7 +105,9 @@ public class MicroServerTest {
 		when(msg10.getOrder()).thenReturn(null);
 		when(msg10.getSenderNickname()).thenReturn("userA");	
 		
-		
+		when(msg11.getType()).thenReturn(Type.NEW_ORDER);
+		when(msg11.getOrder()).thenReturn(Order.createBuyOrder("userA", "ISCTE", 10, 20.0));
+		when(msg11.getSenderNickname()).thenReturn("userA");		
 	}
 	
 	@After
@@ -149,14 +151,33 @@ public class MicroServerTest {
 		verify(serverComm, atLeastOnce()).sendError(null, "Type was not recognized");
 	}
 	
-//	@Test
-//	public void testStart4() throws Exception {		
-//	when(serverComm.getNextMessage()).thenReturn(msg1).thenReturn(msg10).thenReturn(null);
-//		
-//		ms.start(serverComm);
-//		
-//		verify(serverComm, atLeastOnce()).sendError(msg10.getSenderNickname(), "There was no order in the message");
-//	}
+	@Test
+	public void testStart4() throws Exception {		
+	when(serverComm.getNextMessage()).thenReturn(msg1).thenReturn(msg10).thenReturn(null);
+		
+		ms.start(serverComm);
+		
+		verify(serverComm, atLeastOnce()).sendError(msg10.getSenderNickname(), "There was no order in the message");
+	}
+	
+	@Test
+	public void testStart5() throws Exception {		
+	when(serverComm.getNextMessage()).thenReturn(msg1).thenReturn(msg9).thenReturn(msg11).thenReturn(null);
+		
+		ms.start(serverComm);
+		
+		//verify(serverComm, atLeastOnce()).sendError(msg10.getSenderNickname(), "There was no order in the message");
+	}
+	
+	@Test
+	public void testStart6() throws Exception {		
+	when(serverComm.getNextMessage()).thenReturn(msg1).thenReturn(msg9).thenReturn(msg9).thenReturn(msg9).thenReturn(msg9).thenReturn(msg9).thenReturn(null);
+		
+		ms.start(serverComm);
+		
+		//verify(serverComm, atLeastOnce()).sendError(msg10.getSenderNickname(), "There was no order in the message");
+	}
+	
 	
 	@Test
 	public void testStartProcessSellOrder() throws Exception {
@@ -183,11 +204,11 @@ public class MicroServerTest {
 		verify(serverComm, atLeastOnce()).sendError(msg1.getSenderNickname(), "The user " + msg1.getSenderNickname() + " is already connected.");
 	}
 	
-//	@Test
-//	public void testProcessUserDisconnected() throws Exception {		
-//		when(serverComm.getNextMessage()).thenReturn(msg1).thenReturn(msg2).thenReturn(msg3).thenReturn(msg4).thenReturn(msg8).thenReturn(msg9).thenReturn(msg10).thenReturn(msg5).thenReturn(msg6).thenReturn(null);
-//		ms.start(serverComm);
-//		
-//		verify(serverComm, atLeastOnce()).sendOrder("userA", Order.createBuyOrder("userB", "ISCTE", 5, 21.0));
-//	}
+	@Test
+	public void testProcessUserDisconnected() throws Exception {		
+		when(serverComm.getNextMessage()).thenReturn(msg1).thenReturn(msg2).thenReturn(msg3).thenReturn(msg4).thenReturn(msg8).thenReturn(msg9).thenReturn(msg10).thenReturn(msg5).thenReturn(msg6).thenReturn(null);
+		ms.start(serverComm);
+		
+		verify(serverComm, atLeastOnce()).sendOrder("userA", Order.createBuyOrder("userB", "ISCTE", 5, 21.0));
+	}
 }
