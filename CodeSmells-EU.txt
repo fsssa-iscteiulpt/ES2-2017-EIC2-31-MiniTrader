@@ -1369,10 +1369,10 @@ src/main/java/mt/filter/ClientMessagesTimer.java:10:	Parameter 'username' is not
 src/main/java/mt/filter/ClientMessagesTimer.java:10:	publicMethodCommentRequirement Required
 src/main/java/mt/filter/ClientMessagesTimer.java:16:	publicMethodCommentRequirement Required
 src/main/java/mt/filter/ClientMessagesTimer.java:21:	publicMethodCommentRequirement Required
-src/main/java/mt/server/MicroServer.java:1:	Possible God class (WMC=66, ATFD=68, TCC=0.03676470588235294)
-src/main/java/mt/server/MicroServer.java:33:	The class 'MicroServer' has a Cyclomatic Complexity of 4 (Highest = 19).
-src/main/java/mt/server/MicroServer.java:33:	The class 'MicroServer' has a Modified Cyclomatic Complexity of 3 (Highest = 12).
-src/main/java/mt/server/MicroServer.java:33:	The class 'MicroServer' has a Standard Cyclomatic Complexity of 4 (Highest = 14).
+src/main/java/mt/server/MicroServer.java:1:	Possible God class (WMC=67, ATFD=68, TCC=0.032679738562091505)
+src/main/java/mt/server/MicroServer.java:33:	The class 'MicroServer' has a Cyclomatic Complexity of 4 (Highest = 13).
+src/main/java/mt/server/MicroServer.java:33:	The class 'MicroServer' has a Modified Cyclomatic Complexity of 3 (Highest = 10).
+src/main/java/mt/server/MicroServer.java:33:	The class 'MicroServer' has a Standard Cyclomatic Complexity of 3 (Highest = 12).
 src/main/java/mt/server/MicroServer.java:33:	This class has too many methods, consider refactoring it.
 src/main/java/mt/server/MicroServer.java:35:	Parameter 'args' is not assigned and could be declared final
 src/main/java/mt/server/MicroServer.java:35:	publicMethodCommentRequirement Required
@@ -1390,137 +1390,134 @@ src/main/java/mt/server/MicroServer.java:56:	Found non-transient, non-static mem
 src/main/java/mt/server/MicroServer.java:61:	Avoid variables with short names like id
 src/main/java/mt/server/MicroServer.java:61:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
 src/main/java/mt/server/MicroServer.java:64:	Fields should be declared at the top of the class, before any method declarations, constructors, initializers or inner classes.
-src/main/java/mt/server/MicroServer.java:76:	Found 'UR'-anomaly for variable 'getout' (lines '76'-'114').
-src/main/java/mt/server/MicroServer.java:76:	Found 'UR'-anomaly for variable 'o' (lines '76'-'109').
 src/main/java/mt/server/MicroServer.java:76:	Parameter 'serverComm' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:76:	The method 'start' has a Cyclomatic Complexity of 19.
-src/main/java/mt/server/MicroServer.java:76:	The method 'start' has a Modified Cyclomatic Complexity of 12.
-src/main/java/mt/server/MicroServer.java:76:	The method 'start' has a Standard Cyclomatic Complexity of 14.
+src/main/java/mt/server/MicroServer.java:76:	The method 'start' has a Cyclomatic Complexity of 13.
+src/main/java/mt/server/MicroServer.java:76:	The method 'start' has a Modified Cyclomatic Complexity of 10.
+src/main/java/mt/server/MicroServer.java:76:	The method 'start' has a Standard Cyclomatic Complexity of 12.
 src/main/java/mt/server/MicroServer.java:76:	publicMethodCommentRequirement Required
 src/main/java/mt/server/MicroServer.java:83:	Found 'DD'-anomaly for variable 'msg' (lines '83'-'84').
 src/main/java/mt/server/MicroServer.java:84:	Avoid assignments in operands
-src/main/java/mt/server/MicroServer.java:84:	Found 'DU'-anomaly for variable 'msg' (lines '84'-'140').
+src/main/java/mt/server/MicroServer.java:84:	Found 'DU'-anomaly for variable 'msg' (lines '84'-'137').
 src/main/java/mt/server/MicroServer.java:85:	Local variable 'type' could be declared final
 src/main/java/mt/server/MicroServer.java:85:	Potential violation of Law of Demeter (object not created locally)
 src/main/java/mt/server/MicroServer.java:97:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:107:	Found 'DD'-anomaly for variable 'getout' (lines '107'-'111').
-src/main/java/mt/server/MicroServer.java:108:	Local variable 'o' could be declared final
+src/main/java/mt/server/MicroServer.java:107:	Avoid if (x != y) ..; else ..;
+src/main/java/mt/server/MicroServer.java:108:	Avoid using Literals in Conditional Statements
+src/main/java/mt/server/MicroServer.java:108:	Potential violation of Law of Demeter (method chain calls)
 src/main/java/mt/server/MicroServer.java:108:	Potential violation of Law of Demeter (object not created locally)
 src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (method chain calls)
 src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:109:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:109:	Useless parentheses.
-src/main/java/mt/server/MicroServer.java:109:	Useless parentheses.
-src/main/java/mt/server/MicroServer.java:111:	Found 'DD'-anomaly for variable 'getout' (lines '111'-'111').
-src/main/java/mt/server/MicroServer.java:114:	Avoid using if statements without curly braces
-src/main/java/mt/server/MicroServer.java:116:	Avoid using Literals in Conditional Statements
-src/main/java/mt/server/MicroServer.java:116:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:116:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:117:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:117:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:118:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:118:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:119:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:119:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:121:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:132:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:151:	Found 'UR'-anomaly for variable 'entry' (lines '151'-'153').
-src/main/java/mt/server/MicroServer.java:151:	Parameter 'msg' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:152:	Local variable 'entry' could be declared final
-src/main/java/mt/server/MicroServer.java:153:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:161:	Comment is too large: Too many lines
-src/main/java/mt/server/MicroServer.java:170:	Found 'UR'-anomaly for variable 'entry' (lines '170'-'175').
-src/main/java/mt/server/MicroServer.java:170:	Parameter 'msg' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:171:	There is log block not surrounded by if
-src/main/java/mt/server/MicroServer.java:174:	Local variable 'entry' could be declared final
-src/main/java/mt/server/MicroServer.java:175:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:190:	Found 'UR'-anomaly for variable 'entry' (lines '190'-'194').
-src/main/java/mt/server/MicroServer.java:190:	Found 'UR'-anomaly for variable 'entry' (lines '190'-'194').
-src/main/java/mt/server/MicroServer.java:190:	Found 'UR'-anomaly for variable 'order' (lines '190'-'196').
-src/main/java/mt/server/MicroServer.java:190:	Found 'UR'-anomaly for variable 'order' (lines '190'-'196').
-src/main/java/mt/server/MicroServer.java:190:	Parameter 'msg' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:191:	Local variable 'ordersToSend' could be declared final
-src/main/java/mt/server/MicroServer.java:193:	Local variable 'entry' could be declared final
-src/main/java/mt/server/MicroServer.java:194:	Local variable 'orders' could be declared final
-src/main/java/mt/server/MicroServer.java:195:	Local variable 'order' could be declared final
-src/main/java/mt/server/MicroServer.java:203:	Avoid variables with short names like o1
-src/main/java/mt/server/MicroServer.java:203:	Avoid variables with short names like o2
-src/main/java/mt/server/MicroServer.java:203:	Parameter 'o1' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:203:	Parameter 'o2' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:203:	publicMethodCommentRequirement Required
-src/main/java/mt/server/MicroServer.java:208:	Local variable 'order' could be declared final
-src/main/java/mt/server/MicroServer.java:219:	Found 'UR'-anomaly for variable 'entry' (lines '219'-'227').
-src/main/java/mt/server/MicroServer.java:219:	Found 'UR'-anomaly for variable 'order' (lines '219'-'229').
-src/main/java/mt/server/MicroServer.java:219:	Parameter 'msg' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:220:	There is log block not surrounded by if
-src/main/java/mt/server/MicroServer.java:226:	Local variable 'entry' could be declared final
-src/main/java/mt/server/MicroServer.java:227:	Local variable 'orders' could be declared final
-src/main/java/mt/server/MicroServer.java:228:	Local variable 'order' could be declared final
-src/main/java/mt/server/MicroServer.java:240:	Parameter 'msg' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:243:	Avoid variables with short names like o
-src/main/java/mt/server/MicroServer.java:243:	Local variable 'o' could be declared final
-src/main/java/mt/server/MicroServer.java:249:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:254:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:275:	Avoid variables with short names like o
-src/main/java/mt/server/MicroServer.java:275:	Parameter 'o' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:279:	Local variable 'orders' could be declared final
-src/main/java/mt/server/MicroServer.java:280:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:287:	Comment is too large: Line too long
-src/main/java/mt/server/MicroServer.java:289:	Found 'UR'-anomaly for variable 'entry' (lines '289'-'293').
-src/main/java/mt/server/MicroServer.java:289:	Found 'UR'-anomaly for variable 'o' (lines '289'-'294').
-src/main/java/mt/server/MicroServer.java:289:	Parameter 'sellOrder' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:292:	Local variable 'entry' could be declared final
-src/main/java/mt/server/MicroServer.java:293:	Local variable 'o' could be declared final
-src/main/java/mt/server/MicroServer.java:294:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:306:	Comment is too large: Line too long
-src/main/java/mt/server/MicroServer.java:308:	Found 'UR'-anomaly for variable 'entry' (lines '308'-'312').
-src/main/java/mt/server/MicroServer.java:308:	Found 'UR'-anomaly for variable 'o' (lines '308'-'313').
-src/main/java/mt/server/MicroServer.java:308:	Parameter 'buyOrder' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:311:	Local variable 'entry' could be declared final
-src/main/java/mt/server/MicroServer.java:312:	Local variable 'o' could be declared final
-src/main/java/mt/server/MicroServer.java:313:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:324:	Comment is too large: Line too long
-src/main/java/mt/server/MicroServer.java:325:	Comment is too large: Line too long
-src/main/java/mt/server/MicroServer.java:327:	Parameter 'buyOrder' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:327:	Parameter 'sellerOrder' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:350:	Found 'UR'-anomaly for variable 'order' (lines '350'-'353').
-src/main/java/mt/server/MicroServer.java:352:	Local variable 'order' could be declared final
-src/main/java/mt/server/MicroServer.java:364:	Found 'UR'-anomaly for variable 'entry' (lines '364'-'370').
-src/main/java/mt/server/MicroServer.java:364:	Parameter 'order' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:369:	Local variable 'entry' could be declared final
-src/main/java/mt/server/MicroServer.java:377:	Found 'UR'-anomaly for variable 'entry' (lines '377'-'382').
-src/main/java/mt/server/MicroServer.java:381:	Local variable 'entry' could be declared final
-src/main/java/mt/server/MicroServer.java:382:	Avoid variables with short names like it
-src/main/java/mt/server/MicroServer.java:382:	Local variable 'it' could be declared final
-src/main/java/mt/server/MicroServer.java:382:	Potential violation of Law of Demeter (method chain calls)
-src/main/java/mt/server/MicroServer.java:384:	Avoid variables with short names like o
-src/main/java/mt/server/MicroServer.java:384:	Local variable 'o' could be declared final
-src/main/java/mt/server/MicroServer.java:385:	Potential violation of Law of Demeter (object not created locally)
-src/main/java/mt/server/MicroServer.java:397:	Parameter 'warning' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:398:	System.out.println is used
-src/main/java/mt/server/MicroServer.java:399:	Local variable 'frame' could be declared final
-src/main/java/mt/server/MicroServer.java:405:	Comment is too large: Line too long
-src/main/java/mt/server/MicroServer.java:409:	Found 'UR'-anomaly for variable 'order' (lines '409'-'413').
-src/main/java/mt/server/MicroServer.java:409:	Parameter 'msg' is not assigned and could be declared final
-src/main/java/mt/server/MicroServer.java:410:	Found 'DD'-anomaly for variable 'count' (lines '410'-'414').
-src/main/java/mt/server/MicroServer.java:411:	Local variable 'orders' could be declared final
-src/main/java/mt/server/MicroServer.java:412:	Local variable 'order' could be declared final
-src/main/java/mt/server/MicroServer.java:415:	Avoid using Literals in Conditional Statements
-src/main/java/mt/server/MicroServer.java:415:	Avoid using if statements without curly braces
-src/main/java/mt/server/MicroServer.java:416:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/mt/server/MicroServer.java:110:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:110:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/mt/server/MicroServer.java:111:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:111:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/mt/server/MicroServer.java:113:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/mt/server/MicroServer.java:128:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/mt/server/MicroServer.java:148:	Found 'UR'-anomaly for variable 'entry' (lines '148'-'150').
+src/main/java/mt/server/MicroServer.java:148:	Parameter 'msg' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:149:	Local variable 'entry' could be declared final
+src/main/java/mt/server/MicroServer.java:150:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:158:	Comment is too large: Too many lines
+src/main/java/mt/server/MicroServer.java:167:	Found 'UR'-anomaly for variable 'entry' (lines '167'-'172').
+src/main/java/mt/server/MicroServer.java:167:	Parameter 'msg' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:168:	There is log block not surrounded by if
+src/main/java/mt/server/MicroServer.java:171:	Local variable 'entry' could be declared final
+src/main/java/mt/server/MicroServer.java:172:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:187:	Found 'UR'-anomaly for variable 'entry' (lines '187'-'191').
+src/main/java/mt/server/MicroServer.java:187:	Found 'UR'-anomaly for variable 'entry' (lines '187'-'191').
+src/main/java/mt/server/MicroServer.java:187:	Found 'UR'-anomaly for variable 'order' (lines '187'-'193').
+src/main/java/mt/server/MicroServer.java:187:	Found 'UR'-anomaly for variable 'order' (lines '187'-'193').
+src/main/java/mt/server/MicroServer.java:187:	Parameter 'msg' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:188:	Local variable 'ordersToSend' could be declared final
+src/main/java/mt/server/MicroServer.java:190:	Local variable 'entry' could be declared final
+src/main/java/mt/server/MicroServer.java:191:	Local variable 'orders' could be declared final
+src/main/java/mt/server/MicroServer.java:192:	Local variable 'order' could be declared final
+src/main/java/mt/server/MicroServer.java:200:	Avoid variables with short names like o1
+src/main/java/mt/server/MicroServer.java:200:	Avoid variables with short names like o2
+src/main/java/mt/server/MicroServer.java:200:	Parameter 'o1' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:200:	Parameter 'o2' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:200:	publicMethodCommentRequirement Required
+src/main/java/mt/server/MicroServer.java:205:	Local variable 'order' could be declared final
+src/main/java/mt/server/MicroServer.java:216:	Found 'UR'-anomaly for variable 'entry' (lines '216'-'224').
+src/main/java/mt/server/MicroServer.java:216:	Found 'UR'-anomaly for variable 'order' (lines '216'-'226').
+src/main/java/mt/server/MicroServer.java:216:	Parameter 'msg' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:217:	There is log block not surrounded by if
+src/main/java/mt/server/MicroServer.java:223:	Local variable 'entry' could be declared final
+src/main/java/mt/server/MicroServer.java:224:	Local variable 'orders' could be declared final
+src/main/java/mt/server/MicroServer.java:225:	Local variable 'order' could be declared final
+src/main/java/mt/server/MicroServer.java:237:	Parameter 'msg' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:240:	Avoid variables with short names like o
+src/main/java/mt/server/MicroServer.java:240:	Local variable 'o' could be declared final
+src/main/java/mt/server/MicroServer.java:246:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/mt/server/MicroServer.java:251:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/mt/server/MicroServer.java:272:	Avoid variables with short names like o
+src/main/java/mt/server/MicroServer.java:272:	Parameter 'o' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:276:	Local variable 'orders' could be declared final
+src/main/java/mt/server/MicroServer.java:277:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/mt/server/MicroServer.java:284:	Comment is too large: Line too long
+src/main/java/mt/server/MicroServer.java:286:	Found 'UR'-anomaly for variable 'entry' (lines '286'-'290').
+src/main/java/mt/server/MicroServer.java:286:	Found 'UR'-anomaly for variable 'o' (lines '286'-'291').
+src/main/java/mt/server/MicroServer.java:286:	Parameter 'sellOrder' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:289:	Local variable 'entry' could be declared final
+src/main/java/mt/server/MicroServer.java:290:	Local variable 'o' could be declared final
+src/main/java/mt/server/MicroServer.java:291:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:303:	Comment is too large: Line too long
+src/main/java/mt/server/MicroServer.java:305:	Found 'UR'-anomaly for variable 'entry' (lines '305'-'309').
+src/main/java/mt/server/MicroServer.java:305:	Found 'UR'-anomaly for variable 'o' (lines '305'-'310').
+src/main/java/mt/server/MicroServer.java:305:	Parameter 'buyOrder' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:308:	Local variable 'entry' could be declared final
+src/main/java/mt/server/MicroServer.java:309:	Local variable 'o' could be declared final
+src/main/java/mt/server/MicroServer.java:310:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:321:	Comment is too large: Line too long
+src/main/java/mt/server/MicroServer.java:322:	Comment is too large: Line too long
+src/main/java/mt/server/MicroServer.java:324:	Parameter 'buyOrder' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:324:	Parameter 'sellerOrder' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:347:	Found 'UR'-anomaly for variable 'order' (lines '347'-'350').
+src/main/java/mt/server/MicroServer.java:349:	Local variable 'order' could be declared final
+src/main/java/mt/server/MicroServer.java:361:	Found 'UR'-anomaly for variable 'entry' (lines '361'-'367').
+src/main/java/mt/server/MicroServer.java:361:	Parameter 'order' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:366:	Local variable 'entry' could be declared final
+src/main/java/mt/server/MicroServer.java:374:	Found 'UR'-anomaly for variable 'entry' (lines '374'-'379').
+src/main/java/mt/server/MicroServer.java:378:	Local variable 'entry' could be declared final
+src/main/java/mt/server/MicroServer.java:379:	Avoid variables with short names like it
+src/main/java/mt/server/MicroServer.java:379:	Local variable 'it' could be declared final
+src/main/java/mt/server/MicroServer.java:379:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:381:	Avoid variables with short names like o
+src/main/java/mt/server/MicroServer.java:381:	Local variable 'o' could be declared final
+src/main/java/mt/server/MicroServer.java:382:	Potential violation of Law of Demeter (object not created locally)
+src/main/java/mt/server/MicroServer.java:394:	Parameter 'warning' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:395:	System.out.println is used
+src/main/java/mt/server/MicroServer.java:396:	Local variable 'frame' could be declared final
+src/main/java/mt/server/MicroServer.java:402:	Comment is too large: Line too long
+src/main/java/mt/server/MicroServer.java:406:	Found 'UR'-anomaly for variable 'order' (lines '406'-'410').
+src/main/java/mt/server/MicroServer.java:406:	Parameter 'msg' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:407:	Found 'DD'-anomaly for variable 'count' (lines '407'-'411').
+src/main/java/mt/server/MicroServer.java:408:	Local variable 'orders' could be declared final
+src/main/java/mt/server/MicroServer.java:409:	Local variable 'order' could be declared final
+src/main/java/mt/server/MicroServer.java:412:	Avoid using Literals in Conditional Statements
+src/main/java/mt/server/MicroServer.java:412:	Avoid using if statements without curly braces
+src/main/java/mt/server/MicroServer.java:413:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/mt/server/MicroServer.java:420:	Comment is too large: Line too long
+src/main/java/mt/server/MicroServer.java:424:	Found 'UR'-anomaly for variable 'o' (lines '424'-'426').
+src/main/java/mt/server/MicroServer.java:424:	Parameter 'msg' is not assigned and could be declared final
+src/main/java/mt/server/MicroServer.java:425:	Local variable 'o' could be declared final
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Useless parentheses.
+src/main/java/mt/server/MicroServer.java:426:	Useless parentheses.
+src/main/java/mt/server/MicroServer.java:427:	A method should have only one exit point, and that should be the last statement in the method
 src/main/java/mt/server/MicroTraderServer.java:6:	Comment is too large: Line too long
 src/main/java/mt/server/MicroTraderServer.java:16:	Comment is too large: Line too long
 src/main/java/mt/server/MicroTraderServer.java:19:	Avoid modifiers which are implied by the context
 src/test/java/mt/test/MicroServerTest.java:24:	Each class should declare at least one constructor
+src/test/java/mt/test/MicroServerTest.java:24:	This class has too many methods, consider refactoring it.
 src/test/java/mt/test/MicroServerTest.java:26:	Avoid variables with short names like ms
 src/test/java/mt/test/MicroServerTest.java:26:	Found non-transient, non-static member. Please mark as transient or provide accessors.
 src/test/java/mt/test/MicroServerTest.java:26:	fieldCommentRequirement Required
@@ -1546,14 +1543,14 @@ src/test/java/mt/test/MicroServerTest.java:56:	Found non-transient, non-static m
 src/test/java/mt/test/MicroServerTest.java:56:	fieldCommentRequirement Required
 src/test/java/mt/test/MicroServerTest.java:59:	Found non-transient, non-static member. Please mark as transient or provide accessors.
 src/test/java/mt/test/MicroServerTest.java:59:	fieldCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:62:	Avoid unused private fields such as 'msg11'.
+src/test/java/mt/test/MicroServerTest.java:62:	Found non-transient, non-static member. Please mark as transient or provide accessors.
 src/test/java/mt/test/MicroServerTest.java:62:	fieldCommentRequirement Required
 src/test/java/mt/test/MicroServerTest.java:65:	You may have misspelled a JUnit framework method (setUp or tearDown)
 src/test/java/mt/test/MicroServerTest.java:65:	publicMethodCommentRequirement Required
 src/test/java/mt/test/MicroServerTest.java:68:	Potential violation of Law of Demeter (method chain calls)
 src/test/java/mt/test/MicroServerTest.java:69:	Potential violation of Law of Demeter (method chain calls)
 src/test/java/mt/test/MicroServerTest.java:70:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:70:	The String literal "userA" appears 11 times in this file; the first occurrence is on line 70
+src/test/java/mt/test/MicroServerTest.java:70:	The String literal "userA" appears 13 times in this file; the first occurrence is on line 70
 src/test/java/mt/test/MicroServerTest.java:72:	Potential violation of Law of Demeter (method chain calls)
 src/test/java/mt/test/MicroServerTest.java:73:	Potential violation of Law of Demeter (method chain calls)
 src/test/java/mt/test/MicroServerTest.java:73:	The String literal "MSFT" appears 5 times in this file; the first occurrence is on line 73
@@ -1576,7 +1573,7 @@ src/test/java/mt/test/MicroServerTest.java:93:	Potential violation of Law of Dem
 src/test/java/mt/test/MicroServerTest.java:94:	Potential violation of Law of Demeter (method chain calls)
 src/test/java/mt/test/MicroServerTest.java:96:	Potential violation of Law of Demeter (method chain calls)
 src/test/java/mt/test/MicroServerTest.java:97:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:97:	The String literal "ISCTE" appears 4 times in this file; the first occurrence is on line 97
+src/test/java/mt/test/MicroServerTest.java:97:	The String literal "ISCTE" appears 5 times in this file; the first occurrence is on line 97
 src/test/java/mt/test/MicroServerTest.java:98:	Potential violation of Law of Demeter (method chain calls)
 src/test/java/mt/test/MicroServerTest.java:100:	Potential violation of Law of Demeter (method chain calls)
 src/test/java/mt/test/MicroServerTest.java:101:	Potential violation of Law of Demeter (method chain calls)
@@ -1584,64 +1581,82 @@ src/test/java/mt/test/MicroServerTest.java:102:	Potential violation of Law of De
 src/test/java/mt/test/MicroServerTest.java:104:	Potential violation of Law of Demeter (method chain calls)
 src/test/java/mt/test/MicroServerTest.java:105:	Potential violation of Law of Demeter (method chain calls)
 src/test/java/mt/test/MicroServerTest.java:106:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:112:	publicMethodCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:113:	Assigning an Object to null is a code smell.  Consider refactoring.
-src/test/java/mt/test/MicroServerTest.java:114:	Assigning an Object to null is a code smell.  Consider refactoring.
-src/test/java/mt/test/MicroServerTest.java:118:	publicMethodCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:119:	Assigning an Object to null is a code smell.  Consider refactoring.
-src/test/java/mt/test/MicroServerTest.java:125:	publicMethodCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:126:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:126:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:126:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:126:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:126:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:126:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:126:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:130:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:131:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:135:	publicMethodCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:136:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:136:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:140:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:144:	publicMethodCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:145:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:145:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:149:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:153:	publicMethodCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:154:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:154:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:154:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:158:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:162:	publicMethodCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:163:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:163:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:163:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:163:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:163:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:166:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:171:	publicMethodCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:172:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:172:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:172:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:172:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:172:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:172:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:172:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:175:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:179:	publicMethodCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:180:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:180:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:180:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:183:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:187:	publicMethodCommentRequirement Required
-src/test/java/mt/test/MicroServerTest.java:188:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:188:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:188:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:188:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:188:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:188:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:188:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:188:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:188:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:188:	Potential violation of Law of Demeter (method chain calls)
-src/test/java/mt/test/MicroServerTest.java:191:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:108:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:109:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:110:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:114:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:115:	Assigning an Object to null is a code smell.  Consider refactoring.
+src/test/java/mt/test/MicroServerTest.java:116:	Assigning an Object to null is a code smell.  Consider refactoring.
+src/test/java/mt/test/MicroServerTest.java:120:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:121:	Assigning an Object to null is a code smell.  Consider refactoring.
+src/test/java/mt/test/MicroServerTest.java:127:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:128:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:128:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:128:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:128:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:128:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:128:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:128:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:132:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:133:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:137:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:138:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:138:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:142:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:146:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:147:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:147:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:151:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:155:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:156:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:156:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:156:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:160:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:164:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:165:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:165:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:165:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:165:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:169:	Comment is too large: Line too long
+src/test/java/mt/test/MicroServerTest.java:173:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:174:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:174:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:174:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:174:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:174:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:174:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:174:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:178:	Comment is too large: Line too long
+src/test/java/mt/test/MicroServerTest.java:183:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:184:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:184:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:184:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:184:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:184:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:187:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:192:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:193:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:193:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:193:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:193:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:193:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:193:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:193:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:196:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:200:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:201:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:201:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:201:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:204:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:208:	publicMethodCommentRequirement Required
+src/test/java/mt/test/MicroServerTest.java:209:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:209:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:209:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:209:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:209:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:209:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:209:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:209:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:209:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:209:	Potential violation of Law of Demeter (method chain calls)
+src/test/java/mt/test/MicroServerTest.java:212:	Potential violation of Law of Demeter (method chain calls)
