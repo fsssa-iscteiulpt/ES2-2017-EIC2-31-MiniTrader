@@ -423,7 +423,8 @@ public class MicroServer implements MicroTraderServer {
 	 */
 	private boolean getBuySellSameClient(ServerSideMessage msg){
 		for (Order o : orderMap.get(msg.getSenderNickname())){
-			if (o.getStock().equals(msg.getOrder().getStock()) && ((o.isBuyOrder() && msg.getOrder().isSellOrder()) || (o.isSellOrder() && msg.getOrder().isBuyOrder()))){
+			if (o.getStock().equals(msg.getOrder().getStock()) && ((o.isBuyOrder() && msg.getOrder().isSellOrder() && o.getPricePerUnit() >= msg.getOrder().getPricePerUnit()) || 
+					(o.isSellOrder() && msg.getOrder().isBuyOrder() && msg.getOrder().getPricePerUnit() >= o.getPricePerUnit()))){
 				return true;
 			}
 		}

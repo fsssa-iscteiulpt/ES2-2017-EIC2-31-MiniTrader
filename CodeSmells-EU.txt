@@ -1369,7 +1369,7 @@ src/main/java/mt/filter/ClientMessagesTimer.java:10:	Parameter 'username' is not
 src/main/java/mt/filter/ClientMessagesTimer.java:10:	publicMethodCommentRequirement Required
 src/main/java/mt/filter/ClientMessagesTimer.java:16:	publicMethodCommentRequirement Required
 src/main/java/mt/filter/ClientMessagesTimer.java:21:	publicMethodCommentRequirement Required
-src/main/java/mt/server/MicroServer.java:1:	Possible God class (WMC=67, ATFD=68, TCC=0.032679738562091505)
+src/main/java/mt/server/MicroServer.java:1:	Possible God class (WMC=67, ATFD=70, TCC=0.032679738562091505)
 src/main/java/mt/server/MicroServer.java:33:	The class 'MicroServer' has a Cyclomatic Complexity of 4 (Highest = 13).
 src/main/java/mt/server/MicroServer.java:33:	The class 'MicroServer' has a Modified Cyclomatic Complexity of 3 (Highest = 10).
 src/main/java/mt/server/MicroServer.java:33:	The class 'MicroServer' has a Standard Cyclomatic Complexity of 3 (Highest = 12).
@@ -1510,9 +1510,15 @@ src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Deme
 src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
 src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
 src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:426:	Potential violation of Law of Demeter (method chain calls)
 src/main/java/mt/server/MicroServer.java:426:	Useless parentheses.
-src/main/java/mt/server/MicroServer.java:426:	Useless parentheses.
-src/main/java/mt/server/MicroServer.java:427:	A method should have only one exit point, and that should be the last statement in the method
+src/main/java/mt/server/MicroServer.java:427:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:427:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:427:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:427:	Potential violation of Law of Demeter (method chain calls)
+src/main/java/mt/server/MicroServer.java:427:	Useless parentheses.
+src/main/java/mt/server/MicroServer.java:428:	A method should have only one exit point, and that should be the last statement in the method
 src/main/java/mt/server/MicroTraderServer.java:6:	Comment is too large: Line too long
 src/main/java/mt/server/MicroTraderServer.java:16:	Comment is too large: Line too long
 src/main/java/mt/server/MicroTraderServer.java:19:	Avoid modifiers which are implied by the context
